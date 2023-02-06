@@ -3,11 +3,11 @@ const cors = require("cors");
 const morgan = require("morgan");
 const routerApi = require("./routes")  
 
-// const db = require('./utils/database');
+const db = require('./utils/database');
 
-// db.sync({ force:true})
-// .then(()=>console.log('ok'))
-// .catch((error)=>console.log(error));
+db.sync({ force:false})
+.then(()=>console.log('ok'))
+.catch((error)=>console.log(error));
 
 
 
